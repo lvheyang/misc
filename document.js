@@ -22,7 +22,7 @@ function walk(rootDoc)
 {
     let id = rootDoc.locales["zh-CN"].id
     let contents = httpGet("https://ts.qiniu.io/action/articles/1/versions/" + id)
-    let result = "\n# " + contents.title + "\n\n" + contents["content_md"] 
+    let result = "\n\n# " + contents.title + "\n\n" + contents["content_md"] 
     if (rootDoc.children.length <= 0) {
         return result
     }
